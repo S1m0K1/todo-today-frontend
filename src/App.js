@@ -1,16 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-import DateHeader from './DateHeader';
+import TodayDate from './TodayDate';
+import ToDoFooter from './ToDoFooter';
+import TodoPencilButton from './ToDoPencilButton';
+import ToDoToday from './ToDoToday';
+import ToDoTomorrow from './ToDoTomorrow';
+import ToDoYesterday from './ToDoYesterday';
+import YesterdayDate from './YesterdayDate';
 
 class App extends React.Component {
-  render () {
+  render() {
     return (
       <div className="container">
-        <DateHeader />
-        <p>Hello</p>
-      </div> 
+        <TodayDate />
+        <ToDoFooter />
+        <TodoPencilButton />
+        <ToDoToday />
+        <ToDoTomorrow />
+        <ToDoYesterday />
+        <YesterdayDate />
+
+      </div>
     );
   }
 }
