@@ -4,13 +4,13 @@ class YesterdayDate extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <row>
-          <column className="column-side col-sm-3">
-            <h1 style={{ marginBottom: '-70px', color: 'grey' }}>7</h1>
-            <h3 style={{ color: 'grey' }}>Saturday</h3>
-            <hr style={{ color: 'grey' }} />
-          </column>
-        </row>
+        <div className="row">
+          <div className="col-sm-3">
+            <h1 style={{ color: 'grey' }}>7</h1>
+            <h3 style={{ color: 'grey', paddingTop: "50px" }}>Saturday</h3>
+            <hr style={{ borderStyle: 'none', borderTopStyle: 'dotted', borderWidth: '5px', width: '10%', color: "grey", margin: "center"}} />
+          </div>
+        </div>
       </div>
     );
   }

@@ -6,27 +6,73 @@ h1 {
   font-weight: 250;
 }
 
+h2 {
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+  font-size: 3.8em;
+  font-weight: 250;
+}
+
 h3 {
   font-family: Georgia, serif;
-  color: grey;
+  color: #1e836c;
   text-align: center;
   font-size: 2.5em;
-  font-weight: 150;
-  padding: 25% 0 0 0;
+  font-weight: 100;
 }
-
+  
 hr {
   border-style: none;
-  border-top-style: dotted;
-  /*color: white;*/
-  border-width: 5px;
-  width: 10%;
+  color: white;
+  border-width: 0.5px;
+  border-bottom-style: ridge; 
+  padding-top: 10px;
+  padding-bottom: 25px;
+  /* margin-right: 100px; */
 }
 
-li {
+.col-sm-6 {
+  background-color: #1e836c;
+  width: 50%;
+}
+
+.col-sm-3 {
+  background-color: white;
+  width: 25%;
+}
+
+.tasks-list {
+  background-color: #1e836c;
   list-style-type: none;
-  margin: auto;
-  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+  margin-top: 50px;
+  padding: 50px 25px 100px 100px;
+}  
+
+li {
+  padding-top: 25px;
+}
+
+.input {
+  width: 80%;
+  background-color: #1e836c;
+  border: none;
+  border-bottom: 1px solid white;
+  padding-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: white;
+}
+
+.pencil-btn {
+  background-color: #1e836c;
+  border: none;
+  color: white;
+  font-size: 50px;
 }
 
 footer {
@@ -34,39 +80,72 @@ footer {
   font-family: Georgia, serif;
   color: white;
   text-align: center;
-  font-size: 1em;
-  padding-top: 250px;
+  padding: 100px 25px 100px 25px;
+  padding-bottom: 100px;
 }
 
-input[type=text] {
-  width: 100%;
-  /*padding: 10px;*/
-  margin: 0;
-  box-sizing: border-box;
-  border: none;
-  background-color: #1e836c;
-  border-bottom: 0.5px solid white;
+
+
+ 
+
+
+  /* .done-list {
+    background-color: white;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: grey;
+    text-align: left;
+    margin-top: 50px;
+    padding: 50px 25px 100px;
+  }
+  
+  .do-tomorrow {
+    background-color: white;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #1e836c;
+    text-align: left;
+    margin-top: 50px;
+    padding: 50px 25px 100px;
+  }
+  
+  
+  
+  .input-done {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: grey;
+  }
+  
+  .input-todo {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #1e836c;
+  } */
+  
+@media screen and (max-width: 600px) {
+  div.side {
+    display: none;
+  }
 }
 
-.tasks-list {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  color: white;
-  text-align: left;
-  margin-top: 50px;
-  padding: 5px;
-}
+@media screen and (max-width: 600px) {
+  div.main {
+    width: 100%;
+    }
+  }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+

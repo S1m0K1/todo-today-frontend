@@ -2,26 +2,23 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import TodayDate from './TodayDate';
-import ToDoFooter from './ToDoFooter';
-import TodoPencilButton from './ToDoPencilButton';
-import ToDoToday from './ToDoToday';
-import ToDoTomorrow from './ToDoTomorrow';
+// import TodayDate from './TodayDate';
+// import ToDoToday from './ToDoToday';
+// import ToDoFooter from './ToDoFooter';
+// import YesterdayDate from './YesterdayDate';
 import ToDoYesterday from './ToDoYesterday';
-import YesterdayDate from './YesterdayDate';
+// import ToDoTomorrow from './ToDoTomorrow';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <TodayDate />
-        <ToDoFooter />
-        <TodoPencilButton />
-        <ToDoToday />
-        <ToDoTomorrow />
+      <div className="container-fluid">
+        {/* <TodayDate /> */}
+        {/* <ToDoToday /> */}
+        {/* <ToDoFooter /> */}
+        {/* <YesterdayDate /> */}
         <ToDoYesterday />
-        <YesterdayDate />
-
+        {/* <ToDoTomorrow /> */}
       </div>
     );
   }
