@@ -50,18 +50,40 @@ hr {
   color: white;
   text-align: left;
   margin-top: 50px;
-  padding: 50px 25px 100px 100px;
+  padding: 50px 25px 100px 25px;
 }  
 
 li {
   padding-top: 25px;
 }
 
+.done-list {
+  background-color: white;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: grey;
+  text-align: left;
+  margin-top: 50px;
+  padding: 50px 25px 100px 25px;
+}
+
+.do-tomorrow-list {
+  background-color: white;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #1e836c;
+  text-align: left;
+  margin-top: 50px;
+  padding: 50px 25px 100px 25px;
+}
+
 .input {
-  width: 80%;
+  width: 100%;
   background-color: #1e836c;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px dotted white;
   padding-top: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
@@ -83,55 +105,6 @@ footer {
   padding: 100px 25px 100px 25px;
   padding-bottom: 100px;
 }
-
-
-
- 
-
-
-  /* .done-list {
-    background-color: white;
-    list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    color: grey;
-    text-align: left;
-    margin-top: 50px;
-    padding: 50px 25px 100px;
-  }
-  
-  .do-tomorrow {
-    background-color: white;
-    list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    color: #1e836c;
-    text-align: left;
-    margin-top: 50px;
-    padding: 50px 25px 100px;
-  }
-  
-  
-  
-  .input-done {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid lightgrey;
-    padding-top: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    color: grey;
-  }
-  
-  .input-todo {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid lightgrey;
-    padding-top: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    color: #1e836c;
-  } */
   
 @media screen and (max-width: 600px) {
   div.side {
@@ -144,8 +117,3 @@ footer {
     width: 100%;
     }
   }
-
-  
-
-
-
