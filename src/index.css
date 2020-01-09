@@ -32,7 +32,7 @@ hr {
   /* margin-right: 100px; */
 }
 
-.col-sm-6 {
+.col-6 {
   background-color: #1e836c;
   width: 50%;
 }
@@ -80,7 +80,7 @@ li {
 }
 
 .input {
-  width: 100%;
+  width: 200%;
   background-color: #1e836c;
   border: none;
   border-bottom: 1px dotted white;
@@ -95,6 +95,7 @@ li {
   border: none;
   color: white;
   font-size: 50px;
+  
 }
 
 footer {
