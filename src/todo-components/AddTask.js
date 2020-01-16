@@ -5,12 +5,7 @@ class AddTask extends React.Component {
         return (
             <div className="row">
                 <div className="col-6">
-
-                    {/* <div className="input-group mb-3"> */}
-                    {/* What does mb-3 mean? */}
                     <div className="form">
-                        {/* <div className="input-group-append"> */}
-
                         <button class="pencil-btn" type="button" name="add a new todo">
                             &#9998;
                             </button>

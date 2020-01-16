@@ -13,16 +13,18 @@ import ToDoTomorrow from './todo-components/ToDoTomorrow';
 function App() {
   return (
     <div className="container-fluid">
-      
-      <YesterdayDate />
-      <ToDoYesterday />
-      {/* <ColumnMain /> */}
-      {/* <TodayDate /> */}
-      <ToDoToday />
-      {/* <ToDoFooter /> */}
+      <div className="row">
 
-      <TomorrowDate />
-      <ToDoTomorrow />
+        <YesterdayDate />
+        <ToDoYesterday />
+        {/* <ColumnMain /> */}
+        {/* <TodayDate /> */}
+        <ToDoToday />
+        {/* <ToDoFooter /> */}
+
+        <TomorrowDate />
+        <ToDoTomorrow />
+      </div>
     </div>
   );
 }
