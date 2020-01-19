@@ -1,15 +1,15 @@
 import React from 'react';
 
-class YesterdayDate extends React.Component {
+class TomorrowDate extends React.Component {
   render() {
     return (
-      <div className="col-sm-3">
-        <h1 style={{ color: '#1e836c' }}>6</h1>
-        <h3 style={{ color: '#1e836c', paddingTop: "50px" }}>Monday</h3>
-        <hr style={{ borderStyle: 'none', borderTopStyle: 'dotted', borderWidth: '5px', width: '10%', color: "#1e836c", margin: "center" }} />
+      <div className="col-md-3 left d-none d-md-block tomorrow">
+        <h1 style={{ color: '#1e836c', marginTop: '30px' }}>20</h1>
+        <h3 style={{ color: '#1e836c', paddingTop: "50px", paddingBottom: '25px' }}>Monday</h3>
+        <hr style={{ width: '10%', color: "#1e836c", margin: "center" }} />
       </div>
     );
   }
 }
 
-export default YesterdayDate;
+export default TomorrowDate;

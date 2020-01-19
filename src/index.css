@@ -22,20 +22,39 @@ h3 {
   font-size: 2.5em;
   font-weight: 100;
 }
-  
+
 hr {
   border-style: none;
+  border-top: dotted;
+  border-width: 5px;
   color: white;
+}
+
+/* hr {
   border-width: 0.5px;
   border-bottom-style: ridge; 
   padding-top: 10px;
   padding-bottom: 25px;
-  /* margin-right: 100px; */
+} */
+
+.yesterday {
+  background-color: white;
+  height: 100vh;
+}
+
+.today {
+  background-color: #1e836c;
+  height: 100vh;
+}
+
+.tomorrow {
+  background-color: white;
+  height: 100vh;
 }
 
 /*background-columns and media-requests*/
 
-.left {
+/* .left {
   background-color: white;
   height: 100vh;
 }
@@ -48,7 +67,7 @@ hr {
 .right {
   background-color: white;
   height: 100vh;
-}
+} */
 
 /* @media screen and (max-width: 600px) {
   div.main {
