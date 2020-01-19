@@ -33,15 +33,42 @@ hr {
   /* margin-right: 100px; */
 }
 
-.col-6 {
-  background-color: #1e836c;
-  width: 50%;
+/*background-columns and media-requests*/
+
+.left {
+  background-color: white;
+  height: 100vh;
 }
 
-.col-sm-3 {
-  background-color: white;
-  width: 25%;
+.main {
+  background-color: #1e836c;
+  height: 100vh;
 }
+
+.right {
+  background-color: white;
+  height: 100vh;
+}
+
+/* @media screen and (max-width: 600px) {
+  div.main {
+    width: 100%;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+  div.left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.right {
+    display: none;
+  }
+} */
+
+/* Task list css */
 
 .tasks-list {
   background-color: #1e836c;
@@ -108,15 +135,3 @@ footer {
   padding-bottom: 100px;
   vertical-align: center;
 }
-  
-@media screen and (max-width: 600px) {
-  div.side {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  div.main {
-    width: 100%;
-    }
-  }
