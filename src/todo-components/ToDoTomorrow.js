@@ -6,9 +6,9 @@ class ToDoTomorrow extends React.Component {
             <div className="col-sm-3">
                 <ul className="do-tomorrow-list">
                     <li>Add upcoming and future todo's.</li>
-                    <hr style={{ color: "#1e836c" }} />
-                    <li>Yesterday and today's undone todo's will move across to tomorrow.</li>
-                    <hr style={{ color: "#1e836c" }} />
+                    <hr style={{borderWidth: "0.5px", borderStyle: "solid", color: "#1e836c", width: "100%" }}/>
+                    <li>Yesterday and today's undone todo's move over to tomorrow.</li>
+                    <hr style={{borderWidth: "0.5px", borderStyle: "solid", color: "#1e836c", width: "100%" }} />
                 </ul>
             </div>
         );

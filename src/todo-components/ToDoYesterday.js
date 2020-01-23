@@ -7,9 +7,9 @@ class ToDoYesterday extends React.Component {
                 <ul className="done-list">
                     <li style={{ textDecorationLine: "line-through" }}>
                         Yesterday's done todo's are marked done!</li>
-                    <hr />
+                    <hr style={{borderWidth: "0.5px", borderStyle: "solid", color: "grey", width: "100%" }}/>
                     <li>Undone todos move to today's todo list.</li>
-                    <hr />
+                    <hr style={{borderWidth: "0.5px", borderStyle: "solid", color: "grey", width: "100%" }}/>
                 </ul>
             </div>
         );

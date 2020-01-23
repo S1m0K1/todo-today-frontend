@@ -40,6 +40,7 @@ hr {
 .yesterday {
   background-color: white;
   height: 100vh;
+  text-align: center;
 }
 
 .today {
@@ -50,24 +51,28 @@ hr {
 .tomorrow {
   background-color: white;
   height: 100vh;
+  text-align: center;
 }
 
 /*background-columns and media-requests*/
 
-/* .left {
+.left {
   background-color: white;
   height: 100vh;
+  text-align: center;
 }
 
 .main {
   background-color: #1e836c;
   height: 100vh;
+  text-align: center;
 }
 
 .right {
   background-color: white;
   height: 100vh;
-} */
+  text-align: center;
+}
 
 /* @media screen and (max-width: 600px) {
   div.main {
