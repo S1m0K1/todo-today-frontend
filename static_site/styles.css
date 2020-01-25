@@ -4,7 +4,7 @@ h1 {
   text-align: center;
   font-size: 3.8em;
   font-weight: 250;
-  padding-top: 25px;
+  padding-top: 150px;
 }
 
 h2 {
@@ -32,19 +32,7 @@ hr {
 
 li {
   padding-top: 25px;
-
-/* li {
-    list-style-type: none;
-    margin: auto;
-    width: 100%; */
 }
-
-/* hr {
-  border-width: 0.5px;
-  border-bottom-style: ridge; 
-  padding-top: 10px;
-  padding-bottom: 25px;
-} */
 
 .yesterday {
   background-color: white;
