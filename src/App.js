@@ -4,9 +4,7 @@ import ColumnLeft from './todo-components/ColumnLeft';
 import ColumnMain from './todo-components/ColumnMain';
 import ColumnRight from './todo-components/ColumnRight';
 
-import ToDoToday from './todo-components/ToDoToday';
 import ToDoYesterday from './todo-components/ToDoYesterday';
-import ToDoTomorrow from './todo-components/ToDoTomorrow';
 
 class App extends React.Component {
 
@@ -25,12 +23,12 @@ class App extends React.Component {
           <ColumnLeft />
           <ColumnMain />
           <ColumnRight />
+        </div>
         <div className="row">
           <ToDoYesterday />
-          <ToDoToday />
-          <ToDoTomorrow />
+          {/* <ToDoToday /> */}
+          {/* <ToDoTomorrow /> */}
         </div>
-      </div>
       </div>
     );
   }

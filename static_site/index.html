@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>toDoToday</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- <div class="row"> -->
+
+        <!-- Left Column -->
+        <div class="col-md-3 yesterday d-none d-md-block">
+
+            <!-- Left Column - Yesdterday Date -->
+            <div>
+                <h1 style="color: grey; padding: 50% 0 0 0">7</h1>
+                <h3 style="color: grey;">Saturday</h3>
+                <hr style="color: grey">
+            </div>
+
+            <!-- Left Column - done-list -->
+            <div>
+                <ul class="done-list">
+                    <li>
+                        <p style="text-decoration: line-through; color: gray;">Yesterday's done todo's are marked
+                            done!</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: gray; width: 100%">
+                    <li>
+                        <p style="color: gray;">Undone todos move to today's todo list.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: gray; width: 100%">
+                </ul>
+            </div>
+        </div>
+
+            <!-- Middle Column -->
+            <div class="col-12 col-md-6 today">
+
+                <!-- Middle Column - Today Date -->
+                <header>
+                    <h1>8</h1>
+                    <h1>Sunday</h1>
+                    <h3 style="padding: 0 0 25% 0; color: white">Dec, 2019</h3>
+                </header>
+                <hr style="border-color: white; width: 25%;">
+
+                <!-- Middle Column - todo-list -->
+                <ul class="todo-list">
+                    <li>
+                        <p>Double-click todos to edit.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: white; width: 100%">
+                    <li>
+                        <p style="text-decoration: line-through;">Click todos to mark as done.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: white; width: 100%">
+                    <li>
+                        <p>Drag todos to the top or bottom of the list, or to the next column.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: white; width: 100%">
+                
+                 <!-- Middle Column - Button and Input Field -->
+                 <form>
+                    <input type="button" class="btn pencil-btn" value="&#9998;">
+                </br >
+                    <input type="text" class="new-task" name="new-task">
+                </form>
+                
+                </ul>
+
+               
+
+
+                <!-- Middle Column - Footer -->
+                <div>
+                    <footer> what's the 1 thing you want to do | toDOtoday </footer>
+                </div>
+
+                <!-- Right Column - Tomorrow Date -->
+
+            <div class="col-md-3 tomorrow d-none d-md-block">
+                <h1 style="color: #1e836c; padding: 50% 0 0 0">9</h1>
+                <h3 style="color: #1e836c;">Monday</h3>
+                <hr style="border-color: #1e836c;">
+                </div>
+
+                <!-- Right Column - Tomorrow do-tomorrow-list -->
+            
+    <div>
+                <ul class="do-tomorrow-list">
+                    <li>
+                        <p style="color: #1e836c;">Today's undone todo's will move to tomorrow.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color: #1e836c; width: 100%">
+                    <li>
+                        <p style="color: #1e836c;">Add upcoming and future todo's.</p>
+                    </li>
+                    <hr style="border-width:0.5px; border-style:solid; color:#1e836c; width: 100%">
+                </ul>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+</body>
+
+</html>
