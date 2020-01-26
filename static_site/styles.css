@@ -36,19 +36,17 @@ li {
 
 .yesterday {
   background-color: white;
-  height: 100vh;
-  text-align: center;
+  height: 100%;
 }
 
 .today {
   background-color: #1e836c;
-  height: 100vh;
+  height: 100%;
 }
 
 .tomorrow {
   background-color: white;
-  height: 100vh;
-  text-align: center;
+  height: 100%;
 }
 
 .done-list {
@@ -59,7 +57,7 @@ li {
   color: grey;
   text-align: left;
   margin-top: 50px;
-  padding: 50px 25px 100px 25px;
+  padding: 75px 25px 100px 25px;
 }
 
 .todo-list {
@@ -81,7 +79,7 @@ li {
   color: #1e836c;
   text-align: left;
   margin-top: 50px;
-  padding: 50px 25px 100px 25px;
+  padding: 75px 25px 100px 25px;
 }
 
 .new-task {
@@ -98,9 +96,13 @@ li {
 .pencil-btn {
   background-color: #1e836c;
   border: none;
+  border-radius: 0px;
   color: white;
   font-size: 50px;
-  
+}
+
+.pencil-btn:hover {
+  color: white;
 }
 
 footer {
