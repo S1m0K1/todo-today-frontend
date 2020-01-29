@@ -36,17 +36,17 @@ li {
 
 .yesterday {
   background-color: white;
-  height: 100%;
+  height: 100vh;
 }
 
 .today {
   background-color: #1e836c;
-  height: 100%;
+  height: 100vh;
 }
 
 .tomorrow {
   background-color: white;
-  height: 100%;
+  height: 100vh;
 }
 
 .done-list {
