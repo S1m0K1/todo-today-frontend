@@ -3,12 +3,12 @@ import React from 'react';
 class TodayDate extends React.Component {
   render() {
     return (
-      <div className="today">
-        <h1 style={{ paddingTop: '50px' }} >19</h1>
-        <h2 style={{ paddingTop: '25px' }} >Sunday</h2>
-        <h3 style={{ color: 'white', paddingBottom: '75px' }}>Jan, 2020</h3>
-        <hr style={{ width: '15%' }} />
-      </div>
+      <header className="today-date">
+        <h1 style={{ fontSize: '4.5em', paddingTop: '30px' }}>8</h1>
+        <h1 style={{ paddingTop: '25px' }}>Sunday</h1>
+        <h3 style={{ color: 'white' }}>Feb, 2020</h3>
+        <hr style={{ color: 'white', borderWidth: '5px', width: '10%', marginTop: '40px' }} />
+      </header>
     );
   }
 }
