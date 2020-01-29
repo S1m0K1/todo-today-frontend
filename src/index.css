@@ -4,7 +4,7 @@ h1 {
   text-align: center;
   font-size: 3.8em;
   font-weight: 250;
-  padding-top: 25px;
+  padding-top: 150px;
 }
 
 h2 {
@@ -30,45 +30,23 @@ hr {
   color: white;
 }
 
-/* hr {
-  border-width: 0.5px;
-  border-bottom-style: ridge; 
-  padding-top: 10px;
-  padding-bottom: 25px;
-} */
+li {
+  padding-top: 25px;
+}
 
 .yesterday {
   background-color: white;
-  height: 100vh;
-  text-align: center;
+  height: 100%;
 }
 
 .today {
   background-color: #1e836c;
-  height: 100vh;
+  height: 100%;
 }
 
 .tomorrow {
   background-color: white;
-  height: 100vh;
-  text-align: center;
-}
-
-/* Task list css */
-
-.tasks-list {
-  background-color: #1e836c;
-  list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  color: white;
-  text-align: left;
-  margin-top: 50px;
-  padding: 50px 25px 100px 25px;
-}  
-
-li {
-  padding-top: 25px;
+  height: 100%;
 }
 
 .done-list {
@@ -77,6 +55,17 @@ li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   color: grey;
+  text-align: left;
+  margin-top: 50px;
+  padding: 75px 25px 100px 25px;
+}
+
+.todo-list {
+  background-color: #1e836c;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: white;
   text-align: left;
   margin-top: 50px;
   padding: 50px 25px 100px 25px;
@@ -90,11 +79,11 @@ li {
   color: #1e836c;
   text-align: left;
   margin-top: 50px;
-  padding: 50px 25px 100px 25px;
+  padding: 75px 25px 100px 25px;
 }
 
-.input {
-  width: 200%;
+.new-task {
+  width: 100%;
   background-color: #1e836c;
   border: none;
   border-bottom: 1px dotted white;
@@ -107,9 +96,13 @@ li {
 .pencil-btn {
   background-color: #1e836c;
   border: none;
+  border-radius: 0px;
   color: white;
   font-size: 50px;
-  
+}
+
+.pencil-btn:hover {
+  color: white;
 }
 
 footer {
@@ -117,7 +110,7 @@ footer {
   font-family: Georgia, serif;
   color: white;
   text-align: center;
-  padding: auto;
+  padding-top: 100px;
   padding-bottom: 100px;
   vertical-align: center;
 }
