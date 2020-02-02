@@ -1,5 +1,6 @@
 import React from 'react';
-import AddTaskButton from './AddTaskButton'
+import AddTaskButton from './AddTaskButton';
+import AddTask from './AddTask'
 
 class ToDoToday extends React.Component {
     render() {
@@ -12,6 +13,7 @@ class ToDoToday extends React.Component {
                 <p>Drag todos to the top or bottom of the list, or to the next column.</p>
                 <hr style={{ borderWidth: "0.5px", borderStyle: "solid", color: "white", width: "100%" }} />
                 <AddTaskButton />
+                <AddTask />
             </div>
             
         );
