@@ -4,7 +4,7 @@ import TomorrowList from './TomorrowList'
 
 function ColumnRight() {
     return (
-        <div class="col-md-3 tomorrow d-none d-md-block">
+        <div className="col-md-3 tomorrow d-none d-md-block">
             <TomorrowDate />
             <TomorrowList />
         </div>

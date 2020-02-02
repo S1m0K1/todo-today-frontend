@@ -1,17 +1,29 @@
 import React from 'react';
 import AddTaskButton from './AddTaskButton';
 import AddTask from './AddTask'
+import Task from './Task'
+import './TodayList.css'
 
-class ToDoToday extends React.Component {
+class TodayList extends React.Component {
+
     render() {
         return (
-            <div class="todo-list">
-                <p>Double-click todos to edit.</p>
-                <hr style={{ borderWidth: "0.5px", borderStyle: "solid", color: "white", width: "100%" }} />
+            <div className="todo-list">
+                {
+                    this.props.todayItems.map(
+                        (toDo)=><Task item={toDo} />
+                    )
+                }
+
+                {/* <p>Double-click todos to edit.</p>
+                <hr />
+                <hr />
                 <p style={{ textDecorationLine: "line-through" }}>Click todos to mark as done.</p>
-                <hr style={{ borderWidth: "0.5px", borderStyle: "solid", color: "white", width: "100%" }} />
-                <p>Drag todos to the top or bottom of the list, or to the next column.</p>
-                <hr style={{ borderWidth: "0.5px", borderStyle: "solid", color: "white", width: "100%" }} />
+                <hr />
+                <hr />
+                <p>Drag todos to the top or bottom of the list, or to the next day.</p>
+                <hr />
+                <hr /> */}
                 <AddTaskButton />
                 <AddTask />
             </div>
@@ -20,4 +32,4 @@ class ToDoToday extends React.Component {
     }
 }
 
-export default ToDoToday;
+export default TodayList;

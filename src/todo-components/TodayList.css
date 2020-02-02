@@ -1,0 +1,15 @@
+.todo-list {
+  background-color: #1e836c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+}
+
+hr {
+  border-style: none;
+  border-top: solid;
+  border-width: 0.5px;
+  color: white;
+  width: 100%;
+}

@@ -5,8 +5,8 @@ class YesterdayDate extends React.Component {
     return ( 
       <div className="yesterday-date">    
         <h1 style={{ fontSize: '4.5em', color: 'grey', paddingTop: '75px' }}>7</h1>
-        <h3 style={{ color: 'grey', paddingTop: '50px', paddingBottom: '10px' }}>Saturday</h3>
-        <hr style={{ width: '10%', color: 'grey', margin: 'center' }}/>  
+        <h3 style={{ color: 'grey', paddingTop: '50px', paddingBottom: '10px' }}>Friday</h3>
+        <hr style={{ borderTopStyle: 'dotted', borderWidth: '5px', width: '10%', color: 'grey', margin: 'center' }}/>
       </div>
     );
   }
