@@ -1,11 +1,10 @@
 import React from 'react';
 
-
 class Task extends React.Component {
 
     render() {
         return (
-            <div className="task-item">
+            <div>
                 {this.props.item.description}
                 <hr />
                 <hr />

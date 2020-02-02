@@ -1,16 +1,20 @@
-.todo-list {
-  background-color: #1e836c;
+.done-list {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
-  color: white;
+  color: grey;
   text-align: left;
-  padding: 55px 25px 100px 25px;
+  text-decoration: line-through;
+  text-align: left;
+  padding: 100px 25px 100px 25px; 
 }
 
 hr {
   border-style: none;
   border-top: solid;
   border-width: 0.5px;
-  color: #6fb1a1;
+  color: grey;
   width: 100%;
 }
+
+  
+  

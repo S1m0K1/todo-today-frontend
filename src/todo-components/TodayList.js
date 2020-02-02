@@ -14,16 +14,6 @@ class TodayList extends React.Component {
                         (toDo)=><Task item={toDo} />
                     )
                 }
-
-                {/* <p>Double-click todos to edit.</p>
-                <hr />
-                <hr />
-                <p style={{ textDecorationLine: "line-through" }}>Click todos to mark as done.</p>
-                <hr />
-                <hr />
-                <p>Drag todos to the top or bottom of the list, or to the next day.</p>
-                <hr />
-                <hr /> */}
                 <AddTaskButton />
                 <AddTask />
             </div>
