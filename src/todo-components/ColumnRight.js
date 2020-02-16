@@ -7,8 +7,8 @@ class ColumnRight extends React.Component {
     state = {
         tasks: [
           { id: 7, description: "Undone todo's will move to tomorrow.", completed: false },
-          { id: 8, description: "Move upcoming and future todo's to tomorrow's list.", completed: false },
-          { id: 9, description: "Drag undone todos to today's todo list, or tommorrow's list.", completed: false },
+          { id: 8, description: "Move todo's to tomorrow's list.", completed: false },
+          { id: 9, description: "Drag undone todos to today's or tommorrow's list.", completed: false },
           { id: 10, description: "Click todos to mark as done.", completed: true },
         ]
     }
