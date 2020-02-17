@@ -4,7 +4,6 @@ h1 {
   text-align: center;
   font-size: 4.5em;
   font-weight: 250;
-  padding-top: 50px;
 }
 
 h3 {
@@ -18,6 +17,6 @@ h3 {
 hr {
   border-style: none;
   border-top: dotted;
-  border-width: 10px;
+  border-width: 10;
   color: white;
 }

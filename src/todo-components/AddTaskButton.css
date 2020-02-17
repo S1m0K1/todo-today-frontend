@@ -1,0 +1,13 @@
+.pencil-btn {
+    background-color: #1e836c;
+    border: none;
+    border-radius: 0;
+    color: white;
+    font-size: 50;
+    margin-top: 0px;
+    margin-left: 25px;
+  }
+  
+  .pencil-btn:hover {
+    color: white;
+  }

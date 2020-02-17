@@ -43,22 +43,26 @@ li {
 }
 
 .new-task {
-  width: 100%;
+  width: 92%;
   background-color: #1e836c;
   border: none;
-  border-bottom: 1px dotted white;
-  padding-top: 5px;
+  border-bottom: 1px dotted;
+  border-color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   color: white;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .pencil-btn {
   background-color: #1e836c;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   color: white;
   font-size: 50px;
+  margin-top: 0px;
+  margin-left: 25px;
 }
 
 .pencil-btn:hover {
