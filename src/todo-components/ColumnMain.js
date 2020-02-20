@@ -50,7 +50,7 @@ class ColumnMain extends React.Component {
         return (
             <div className="col-12 col-md-6 today">
                 <TodayDate />
-                <TodayList todayItems={this.state.tasks} doneTaskFunction={this.props.doneTask} />
+                <TodayList todayItems={this.state.tasks} doneTaskFunction={this.doneTask} />
                 <AddTaskButton />
                 <AddTaskInput addTaskFunction={this.addTask} />
                 <Footer />
