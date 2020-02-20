@@ -9,11 +9,12 @@ class TodayList extends React.Component {
             <div className="todo-list">
                 {
                     this.props.todayItems.map(
-                        (toDo) => <Task key={toDo.id} item={toDo} />
-                    )
-                }
+                        (toDo) => <Task
+                            key={toDo.id}
+                            item={toDo}
+                            doneTaskFunction={this.props.doneTaskFunction} />
+                    )}
             </div>
-
         );
     }
 }

@@ -33,7 +33,9 @@ class ColumnMain extends React.Component {
     }
 
     // Marking tasks as done
-    // doneTask = (description) => {
+    doneTask = (taskId) => {
+        alert(`You want to delete ${taskId} from state`)
+    }
 
     // Task will be marked as done when this function executes:
     // Get the current list of tasks from state
@@ -48,7 +50,7 @@ class ColumnMain extends React.Component {
         return (
             <div className="col-12 col-md-6 today">
                 <TodayDate />
-                <TodayList todayItems={this.state.tasks} />
+                <TodayList todayItems={this.state.tasks} doneTaskFunction={this.props.doneTask} />
                 <AddTaskButton />
                 <AddTaskInput addTaskFunction={this.addTask} />
                 <Footer />
