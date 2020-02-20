@@ -33,18 +33,27 @@ class ColumnMain extends React.Component {
     }
 
     // Marking tasks as done
-    doneTask = (taskId) => {
-        alert(`You want to delete ${taskId} from state`)
-    }
-
     // Task will be marked as done when this function executes:
-    // Get the current list of tasks from state
-    // const tasks = this.state.tasks;
+    doneTask = (taskId) => {
+        // alert(`You want to delete ${taskId} from state`)
 
-    // Identify task that matches given task id and mark it as done
-    // Add a style-change to the done task = strikethrough
-    // const doneTask = tasks.filter(item => item.id !== taskId);
+        // First find the task that needs to be updated
+        const doneTasks = this.state.tasks; // Array of tasks
+        for (let i = 0; i < doneTasks.length; i++) {
+            const task = doneTasks[i];
+            // console.log(task.description);
 
+            if (task.id === taskId)
+                // Update a property on the identified task
+                task.completed = true;
+            break;
+        }
+    
+    // Update state to reflect changes made to the task
+    this.setState({
+        tasks: doneTasks
+    });
+}
 
     render() {
         return (
