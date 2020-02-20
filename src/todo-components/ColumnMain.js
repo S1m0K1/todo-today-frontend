@@ -20,17 +20,29 @@ class ColumnMain extends React.Component {
     addTask = (taskDescription, taskCategory) => {
         const taskToAdd = { id: uuidv4(), description: taskDescription, category: "today", completed: false };
 
-    // Get the current list of tasks from state
+        // Get the current list of tasks from state
         const newTasks = this.state.tasks;
 
-    // Add taskToAdd to the array of tasks in state
+        // Add taskToAdd to the array of tasks in state
         newTasks.push(taskToAdd);
 
-    // Update the state
+        // Update the state
         this.setState({
             tasks: newTasks
         });
-}
+    }
+
+    // Marking tasks as done
+    // doneTask = (description) => {
+
+    // Task will be marked as done when this function executes:
+    // Get the current list of tasks from state
+    // const tasks = this.state.tasks;
+
+    // Identify task that matches given task id and mark it as done
+    // Add a style-change to the done task = strikethrough
+    // const doneTask = tasks.filter(item => item.id !== taskId);
+
 
     render() {
         return (

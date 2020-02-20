@@ -4,12 +4,12 @@ class AddTaskInput extends React.Component {
     
     // How do you reset state?!
     
-    initialState = {input:''}
-    state = this.initialState;
+    // initialState = {input:''}
+    // state = this.initialState;
 
-    handleFormReset = () => {
-        this.setState(() => this.initialState);
-    }
+    // handleFormReset = () => {
+    //     this.setState(() => this.initialState);
+    // }
 
     addTask = () => {
         this.props.addTaskFunction(this.state.taskDescriptionChanged);
@@ -30,7 +30,7 @@ class AddTaskInput extends React.Component {
                 onKeyPress={event => {
                     if (event.key === 'Enter') {
                         this.addTask();
-                        this.handleFormReset();
+                        // this.handleFormReset();
                     }
                 }}
             />

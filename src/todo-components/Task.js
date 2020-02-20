@@ -3,8 +3,8 @@ import React from 'react';
 class Task extends React.Component {
 
     taskDoneClicked = () => {
-        alert('Click to mark as done!')
-    }
+        alert(`You completed task ${this.props.item.id}`);
+    };
 
     render() {
         return (
