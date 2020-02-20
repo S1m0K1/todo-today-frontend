@@ -10,15 +10,15 @@ class ColumnMain extends React.Component {
 
     state = {
         tasks: [
-            { id: uuidv4(), description: "Double-click todos to edit.", completed: false },
-            { id: uuidv4(), description: "Click todos to mark as done.", completed: true },
-            { id: uuidv4(), description: "Drag todos to the top or bottom of the list, or to the next day.", completed: false },
+            { id: uuidv4(), description: "Double-click todos to edit.", category: "today", completed: false },
+            { id: uuidv4(), description: "Click todos to mark as done.", category: "today", completed: true },
+            { id: uuidv4(), description: "Drag todos to the top or bottom of the list, or to the next day.", category: "today", completed: false },
         ]
     }
     // Adding a task:
     // Define the task being added
     addTask = (taskDescription, taskCategory) => {
-        const taskToAdd = { id: uuidv4(), description: taskDescription, completed: false };
+        const taskToAdd = { id: uuidv4(), description: taskDescription, category: "today", completed: false };
 
     // Get the current list of tasks from state
         const newTasks = this.state.tasks;

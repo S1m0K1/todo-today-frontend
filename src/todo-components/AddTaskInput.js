@@ -1,10 +1,15 @@
 import React from "react";
 
-class AddTaskInput extends React.Component { 
+class AddTaskInput extends React.Component {
+    
+    // How do you reset state?!
+    
+    initialState = {input:''}
+    state = this.initialState;
 
-    // state = {
-    //     taskDescription: "A brand new todo!"
-    // }
+    handleFormReset = () => {
+        this.setState(() => this.initialState);
+    }
 
     addTask = () => {
         this.props.addTaskFunction(this.state.taskDescriptionChanged);
@@ -18,15 +23,16 @@ class AddTaskInput extends React.Component {
 
     render() {
         return (
-            <input 
-            type="text" 
-            className="new-task" 
-            onChange={this.taskDescriptionChanged}
-            onKeyPress={event => {
-                if (event.key === 'Enter') {
-                    this.addTask()
-                }
-            }}
+            <input
+                type="text"
+                className="new-task"
+                onChange={this.taskDescriptionChanged}
+                onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        this.addTask();
+                        this.handleFormReset();
+                    }
+                }}
             />
         );
     }

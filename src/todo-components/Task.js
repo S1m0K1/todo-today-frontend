@@ -2,9 +2,13 @@ import React from 'react';
 
 class Task extends React.Component {
 
+    taskDoneClicked = () => {
+        alert('Click to mark as done!')
+    }
+
     render() {
         return (
-            <div>
+            <div onClick={this.taskDoneClicked}>
                 {this.props.item.description}
                 <hr />
                 <hr />
