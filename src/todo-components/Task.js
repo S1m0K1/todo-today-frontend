@@ -8,9 +8,18 @@ class Task extends React.Component {
     }
 
     render() {
+        let description;
+
+    if (this.props.item.completed) {
+      description = <div className="done-task"> {this.props.item.description} </div>;
+    } 
+     else {
+      description = <div> {this.props.item.description} </div>;
+    }
+
         return (
             <div onClick={this.taskDoneClicked}>
-                {this.props.item.description}
+                {description}
                 <hr />
                 <hr />
             </div>

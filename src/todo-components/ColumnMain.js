@@ -11,7 +11,7 @@ class ColumnMain extends React.Component {
     state = {
         tasks: [
             { id: uuidv4(), description: "Double-click todos to edit.", category: "today", completed: false },
-            { id: uuidv4(), description: "Click todos to mark as done.", category: "today", completed: true },
+            { id: uuidv4(), description: "Click todos to mark as done.", category: "today", completed: false },
             { id: uuidv4(), description: "Drag todos to the top or bottom of the list, or to the next day.", category: "today", completed: false },
         ]
     }
@@ -48,6 +48,7 @@ class ColumnMain extends React.Component {
                 task.completed = true;
             break;
         }
+        console.log(doneTasks);
     
     // Update state to reflect changes made to the task
     this.setState({
