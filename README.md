@@ -1,6 +1,6 @@
 # Todo Application - Frontend 
 
-This is the front end of a Todo Application, built through the [Tech Returners](https://www.techreturners.com/) Your Journey Into Tech course, and BBC Step into Tech.
+This is the front end of a To-do Application, built through the [Tech Returners](https://www.techreturners.com/) Your Journey Into Tech course, and BBC Step into Tech.
 <br /> 
 
 A simple, visually compelling, usable to-do app: designed with simplicity in mind and as easy to use as a piece of paper. Type to-dos where you want them, move them around, then click to mark them  done.
@@ -47,4 +47,3 @@ Open [http://localhost:3000](http://localhost:3000) to view in the browser.
 
 The page will reload if you make edits.
 <br />
-You will also see any lint errors in the console.
