@@ -8,7 +8,7 @@ class TomorrowList extends React.Component {
             <div className="do-tomorrow-list">
                 {
                     this.props.tomorrowItems.map(
-                        (doTomorrowItem) => <Task key={doTomorrowItem.id} item={doTomorrowItem} />
+                        (doTomorrowItem) => <Task key={doTomorrowItem.taskId} item={doTomorrowItem} />
                     )
                 }
             </div>

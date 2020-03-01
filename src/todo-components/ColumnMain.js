@@ -5,20 +5,34 @@ import AddTaskButton from './AddTaskButton';
 import AddTaskInput from './AddTaskInput';
 import Footer from './Footer'
 import uuidv4 from 'uuid/v4';
+import axios from 'axios';
 
 class ColumnMain extends React.Component {
 
     state = {
         tasks: [
-            { id: uuidv4(), description: "Double-click todos to edit.", category: "today", completed: false },
-            { id: uuidv4(), description: "Click todos to mark as done.", category: "today", completed: false },
-            { id: uuidv4(), description: "Drag todos to the top or bottom of the list, or to the next day.", category: "today", completed: false },
         ]
+    };
+
+    componentDidMount = () => {
+        // Fetch tasks from API
+        axios.get('https://a7nqp1d856.execute-api.eu-west-2.amazonaws.com/dev/tasks')
+            .then((response) => {
+                // Handle success
+                this.setState({
+                    tasks: response.data.tasks
+                })
+            })
+            .catch((error) => {
+                // Handle error
+                console.error(error);
+            });
     }
+
     // Adding a task:
     // Define the task being added
     addTask = (taskDescription, taskCategory) => {
-        const taskToAdd = { id: uuidv4(), description: taskDescription, category: "today", completed: false };
+        const taskToAdd = { taskId: uuidv4(), description: taskDescription, category: "today", completed: false };
 
         // Get the current list of tasks from state
         const newTasks = this.state.tasks;
@@ -43,7 +57,7 @@ class ColumnMain extends React.Component {
             const task = doneTasks[i];
             // console.log(task.description);
 
-            if (task.id === taskId)
+            if (task.taskId === taskId)
                 // Update a property on the identified task
                 task.completed = true;
             break;
@@ -62,7 +76,9 @@ class ColumnMain extends React.Component {
                 <TodayDate />
                 <TodayList todayItems={this.state.tasks} doneTaskFunction={this.doneTask} />
                 <AddTaskButton />
+                {/* {this.props.pencilClicked && ( */}
                 <AddTaskInput addTaskFunction={this.addTask} />
+                {/* )} */}
                 <Footer />
             </div>
 

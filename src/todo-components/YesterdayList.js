@@ -10,7 +10,7 @@ class YesterdayList extends React.Component {
             <div className="done-list">
                  {
                     this.props.yesterdayItems.map(
-                        (doneItem)=><Task key={doneItem.id} item={doneItem} />
+                        (doneItem)=><Task key={doneItem.taskId} item={doneItem} />
                     )
                 }
             </div>

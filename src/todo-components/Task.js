@@ -4,7 +4,7 @@ class Task extends React.Component {
 
     taskDoneClicked = () => {
         // alert(`You completed task! ${this.props.item.id}`);
-        this.props.doneTaskFunction(this.props.item.id);
+        this.props.doneTaskFunction(this.props.item.tasId);
     }
 
     render() {

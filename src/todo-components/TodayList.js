@@ -8,9 +8,8 @@ class TodayList extends React.Component {
         return (
             <div className="todo-list">
                 {
-                    this.props.todayItems.map(
-                        (toDo) => <Task
-                            key={toDo.id}
+                    this.props.todayItems.map((toDo) =>
+                        <Task key={toDo.taskId}
                             item={toDo}
                             doneTaskFunction={this.props.doneTaskFunction} />
                     )}
