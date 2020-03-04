@@ -3,7 +3,7 @@ import TodayDate from './TodayDate';
 import TodayList from './TodayList';
 import AddTaskButton from './AddTaskButton';
 import AddTaskInput from './AddTaskInput';
-import Footer from './Footer'
+import Footer from './Footer';
 import axios from 'axios';
 
 class ColumnMain extends React.Component {
@@ -41,7 +41,6 @@ class ColumnMain extends React.Component {
 
         axios.post('https://a7nqp1d856.execute-api.eu-west-2.amazonaws.com/dev/tasks', taskToAdd)
             .then((response) => {
-
                 // Get the new task id from where it was generated in the backend
                 // Set it as a property on defined JSON object taskToAdd
                 taskToAdd.taskId = response.data.task.taskId;
@@ -61,12 +60,11 @@ class ColumnMain extends React.Component {
                 // Handle error
                 console.error(error);
             });
-    };
+    }
 
     // Marking tasks as done
     // Task will be marked as done when this function executes:
-    doneTask = (taskId) => {
-        // alert(`You want to delete ${taskId} from state`)
+    doneTasks = (taskId) => {
 
         // Find the task that needs to be updated
         const doneTasks = this.state.tasks; // Array of tasks
@@ -87,20 +85,37 @@ class ColumnMain extends React.Component {
         });
     }
 
+    // Deleting tasks
+    // Click on an item marked as done to delete it
+    // Tasks will be deleted when this function executes
+    deleteTask = (taskId) => {
+        // alert(`You deleted ${doneTasks}`)
+
+        // Get list of doneTasks
+        let tasks = this.state.tasks;
+
+        // Identify the done task that matches the given taskId and remove it
+        let updatedTasks = tasks.filter(item => item.taskId !== taskId);
+
+        // Update state with new collection of tasks i.e. without one we've deleted
+        this.setState({
+            tasks: updatedTasks
+        });
+    }
+
     render() {
         return (
             <div className="col-12 col-md-6 today">
                 <TodayDate />
-                <TodayList todayItems={this.state.tasks} doneTaskFunction={this.doneTask} />
+                <TodayList todayItems={this.state.tasks} doneTaskProp={this.doneTask} deleteTaskProp={this.deleteTask} />
                 <AddTaskButton />
                 {/* {this.props.pencilClicked && ( */}
-                <AddTaskInput addTaskFunction={this.addTask} />
+                <AddTaskInput addTaskProp={this.addTask} />
                 {/* )} */}
                 <Footer />
             </div>
 
-        );
+        )};
     }
-}
 
-export default ColumnMain;
+    export default ColumnMain;

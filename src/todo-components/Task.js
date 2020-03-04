@@ -2,9 +2,17 @@ import React from 'react';
 
 class Task extends React.Component {
 
+    // Click on an item to mark as done
+
+    taskClicked = () => {
+        // alert(`You completed task ${this.props.item.taskId}`);
+        // this.props.doneTaskProp(this.props.item.taskId);
+    } 
+
+    // Click on an item marked as done to delete it
     taskDoneClicked = () => {
-        // alert(`You completed task! ${this.props.item.id}`);
-        this.props.doneTaskFunction(this.props.item.tasId);
+        // alert(`You deleted task ${this.props.item.taskId}`);
+        this.props.deleteTaskProp(this.props.item.taskId);
     }
 
     render() {
@@ -16,7 +24,6 @@ class Task extends React.Component {
      else {
       description = <div> {this.props.item.description} </div>;
     }
-
         return (
             <div onClick={this.taskDoneClicked}>
                 {description}
