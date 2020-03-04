@@ -4,7 +4,6 @@ import TodayList from './TodayList';
 import AddTaskButton from './AddTaskButton';
 import AddTaskInput from './AddTaskInput';
 import Footer from './Footer'
-import uuidv4 from 'uuid/v4';
 import axios from 'axios';
 
 class ColumnMain extends React.Component {
@@ -30,28 +29,46 @@ class ColumnMain extends React.Component {
     }
 
     // Adding a task:
-    // Define the task being added
     addTask = (taskDescription, taskCategory) => {
-        const taskToAdd = { taskId: uuidv4(), description: taskDescription, category: "today", completed: false };
 
-        // Get the current list of tasks from state
-        const newTasks = this.state.tasks;
+        // Define the task that is being added by POST request 
+        const taskToAdd = {
+            description: taskDescription,
+            category: "Today",
+            completed: 0,
+            userId: 1
+        }
 
-        // Add taskToAdd to the array of tasks in state
-        newTasks.push(taskToAdd);
+        axios.post('https://a7nqp1d856.execute-api.eu-west-2.amazonaws.com/dev/tasks', taskToAdd)
+            .then((response) => {
 
-        // Update the state
-        this.setState({
-            tasks: newTasks
-        });
-    }
+                // Get the new task id from where it was generated in the backend
+                // Set it as a property on defined JSON object taskToAdd
+                taskToAdd.taskId = response.data.task.taskId;
+
+                // Get the current list of tasks from state
+                const newTasks = this.state.tasks;
+
+                // Add taskToAdd to the array of tasks in state
+                newTasks.push(taskToAdd);
+
+                // Update the state
+                this.setState({
+                    tasks: newTasks
+                });
+            })
+            .catch((error) => {
+                // Handle error
+                console.error(error);
+            });
+    };
 
     // Marking tasks as done
     // Task will be marked as done when this function executes:
     doneTask = (taskId) => {
         // alert(`You want to delete ${taskId} from state`)
 
-        // First find the task that needs to be updated
+        // Find the task that needs to be updated
         const doneTasks = this.state.tasks; // Array of tasks
         for (let i = 0; i < doneTasks.length; i++) {
             const task = doneTasks[i];
@@ -63,12 +80,12 @@ class ColumnMain extends React.Component {
             break;
         }
         console.log(doneTasks);
-    
-    // Update state to reflect changes made to the task
-    this.setState({
-        tasks: doneTasks
-    });
-}
+
+        // Update state to reflect changes made to the task
+        this.setState({
+            tasks: doneTasks
+        });
+    }
 
     render() {
         return (

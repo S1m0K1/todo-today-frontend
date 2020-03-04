@@ -7,10 +7,11 @@ class TomorrowList extends React.Component {
         return (
             <div className="do-tomorrow-list">
                 {
-                    this.props.tomorrowItems.map(
-                        (doTomorrowItem) => <Task key={doTomorrowItem.taskId} item={doTomorrowItem} />
-                    )
-                }
+                    this.props.tomorrowItems.map(doTomorrowItem => (
+                        <Task
+                            key={doTomorrowItem.taskId}
+                            item={doTomorrowItem} />
+                    ))}
             </div>
         );
     }
