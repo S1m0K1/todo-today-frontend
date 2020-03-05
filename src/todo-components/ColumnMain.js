@@ -94,14 +94,21 @@ class ColumnMain extends React.Component {
         // Get list of doneTasks
         let tasks = this.state.tasks;
 
-        // Identify the done task that matches the given taskId and remove it
-        let updatedTasks = tasks.filter(item => item.taskId !== taskId);
+        axios.delete(`https://a7nqp1d856.execute-api.eu-west-2.amazonaws.com/dev/tasks/${taskId}`)
+            .then((response) => {
+                // Identify the done task that matches the given taskId and remove it
+                let updatedTasks = tasks.filter(item => item.taskId !== taskId);
 
-        // Update state with new collection of tasks i.e. without one we've deleted
-        this.setState({
-            tasks: updatedTasks
-        });
-    }
+                // Update state with new collection of tasks i.e. without one we've deleted
+                this.setState({
+                    tasks: updatedTasks
+                });
+            })
+            .catch((error) => {
+                // Handle error
+                console.error(error);
+            });
+    };
 
     render() {
         return (
@@ -115,7 +122,8 @@ class ColumnMain extends React.Component {
                 <Footer />
             </div>
 
-        )};
-    }
+        )
+    };
+}
 
-    export default ColumnMain;
+export default ColumnMain;
