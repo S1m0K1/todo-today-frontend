@@ -4,8 +4,8 @@ class Task extends React.Component {
 
     // Click on an item to mark as done
     taskClicked = () => {
-        alert(`You completed task ${this.props.item.taskId}`);
-        // this.props.doneTaskProp(this.props.item.taskId);
+        // alert(`You completed task ${this.props.item.taskId}`);
+        this.props.doneTaskProp(this.props.item.taskId);
     } 
 
     // // Click on an item marked as done to delete it

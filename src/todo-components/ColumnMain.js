@@ -64,25 +64,26 @@ class ColumnMain extends React.Component {
 
     // Marking tasks as done
     // Task will be marked as done when this function executes:
-    doneTasks = (taskId) => {
+    doneTask = (taskId) => {
+        alert(`You want to mark ${taskId} as done!`);
 
-        // Find the task that needs to be updated
-        const doneTasks = this.state.tasks; // Array of tasks
-        for (let i = 0; i < doneTasks.length; i++) {
-            const task = doneTasks[i];
-            // console.log(task.description);
+        // // Find the task that needs to be updated
+        // const doneTask = this.state.tasks; // Array of tasks
+        // for (let i = 0; i < doneTask.length; i++) {
+        //     const task = doneTask[i];
+        //     // console.log(task.description);
 
-            if (task.taskId === taskId)
-                // Update a property on the identified task
-                task.completed = true;
-            break;
-        }
-        console.log(doneTasks);
+        //     if (task.taskId === taskId)
+        //         // Update a property on the identified task
+        //         task.completed = true;
+        //     break;
+        // }
+        // console.log(doneTask);
 
-        // Update state to reflect changes made to the task
-        this.setState({
-            tasks: doneTasks
-        });
+        // // Update state to reflect changes made to the task
+        // this.setState({
+        //     tasks: doneTask
+        // });
     }
 
     // Deleting tasks
@@ -114,7 +115,10 @@ class ColumnMain extends React.Component {
         return (
             <div className="col-12 col-md-6 today">
                 <TodayDate />
-                <TodayList todayItems={this.state.tasks} doneTaskProp={this.doneTask} deleteTaskProp={this.deleteTask} />
+                <TodayList
+                    todayItems={this.state.tasks}
+                    doneTaskProp={this.doneTask}
+                    deleteTaskProp={this.deleteTask} />
                 <AddTaskButton />
                 {/* {this.props.pencilClicked && ( */}
                 <AddTaskInput addTaskProp={this.addTask} />
